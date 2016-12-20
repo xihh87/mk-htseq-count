@@ -1,0 +1,6 @@
+#!/bin/sh
+find -L data \
+	-name '*.sam' \
+| sed -r \
+	-e 's#^data/#results/htseq-count/#g' \
+	-e 's#\.sam$#.counts#g'
